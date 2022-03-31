@@ -5,14 +5,201 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../output.css">
     <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css"/>
 </head>
 <body>
     <div id="root">
-        
-      
+         <!--Header-->
+        <header class="navbar lg:pt-3 sticky-top">
+            <div class="wrapper">
+                <nav class="navbar-nav ex-lg">
+                    <a class="navbar-brand d-flex" href="#">
+                        <img src="../img/logo.svg" alt="" width="130px">
+                        <div class="search-box">
+                            <input type="search">
+                        </div>
+                    </a>
+
+                    <div role="button" class="navbar-toggler" data-toggle="navbar" data-target="main-menu" >
+                        <span class="navicon"></span>
+                    </div>
+                
+                    <div class="collapse navbar-collapse jc-end" id="main-menu">
+                        <ul class="menu ai-center">
+                                <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</span></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Docs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Themes</a>
+                                </li>
+                                <li class="nav-item dropdown t-center" >
+                                    <span class="nav-link" data-dropdown-toggle data-target="dropdownMenu1">Pages <svg class="caret" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg></span>                          
+                                    <ul id="dropdownMenu1" class="dropdown-menu link lg:mt-2">
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Latest</a></li>
+                                        <li><a href="#">Shops</a></li>
+                                        <li><a href="#">Another Action</a></li>
+                                        <li class="f-center dark-toggle">
+                                            <small>Dark Mode</small>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></svg>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item d-flex ai-center m-1">
+                                    <a class="social-link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"/></svg>
+                                    </a>
+                                    <a href="#" class="social-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M15.3 5.55a2.9 2.9 0 0 0-2.9 2.847l-.028 1.575a.6.6 0 0 1-.68.583l-1.561-.212c-2.054-.28-4.022-1.226-5.91-2.799-.598 3.31.57 5.603 3.383 7.372l1.747 1.098a.6.6 0 0 1 .034.993L7.793 18.17c.947.059 1.846.017 2.592-.131 4.718-.942 7.855-4.492 7.855-10.348 0-.478-1.012-2.141-2.94-2.141zm-4.9 2.81a4.9 4.9 0 0 1 8.385-3.355c.711-.005 1.316.175 2.669-.645-.335 1.64-.5 2.352-1.214 3.331 0 7.642-4.697 11.358-9.463 12.309-3.268.652-8.02-.419-9.382-1.841.694-.054 3.514-.357 5.144-1.55C5.16 15.7-.329 12.47 3.278 3.786c1.693 1.977 3.41 3.323 5.15 4.037 1.158.475 1.442.465 1.973.538z"/></svg>
+                                    </a>
+                                    <a href="#0" class="social-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 0 0-.794.68l-.04.22-.63 3.993-.032.17a.804.804 0 0 1-.794.679H7.72a.483.483 0 0 1-.477-.558L7.418 21h1.518l.95-6.02h1.385c4.678 0 7.75-2.203 8.796-6.502zm-2.96-5.09c.762.868.983 1.81.752 3.285-.019.123-.04.24-.062.36-.735 3.773-3.089 5.446-6.956 5.446H8.957c-.63 0-1.174.414-1.354 1.002l-.014-.002-.93 5.894H3.121a.051.051 0 0 1-.05-.06l2.598-16.51A.95.95 0 0 1 6.607 2h5.976c2.183 0 3.716.469 4.523 1.388z"/></svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="btn-primary sm sm:mt-2">Get Started</a>
+                                </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--Header-->
+        <div class="documentation-wrapper">
+            <div class="sidebar-toggler lg:elev" data-toggle="navbar" data-target="main-menu2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0H24V24H0z"/><path d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z"/></svg>
+            </div>
+            <div class="wrapper">
+                <div class="grid ai-str">
+                    <div class="col-12 md:col-3 lg:col-2">
+                        <aside id="main-menu2" class="side-bar sticky-top">
+                            <nav id="nav" class="aside-nav">
+                                <ul class="">
+                                    <li>
+                                        <h5>Getting started</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="/docs/getting-started/introduction/ ">Introduction </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/quickstart/">Quickstart </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/react/">React <span class="badge primary">new!</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/license/">License </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/changelog/">Changelog </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h5>Customize</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="/docs/getting-started/introduction/ ">Configuration </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/quickstart/">Theming </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/react/">Colors </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/license/">Icons </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/getting-started/changelog/">Changelog </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+                    </div>
+                    <div class="col-12 md:col-9 lg:col-8">
+                        <div id="app">
+                            <div class="main">
+                                <div class="page-content">
+                                    <!--Intro-->
+                                    <div class="intro-section pb-4">
+                                        <h2>Dora.Design - CSS Design System</h2>
+                                        <p>Get started with the most popular open-source library of interactive UI components built with the utility classes from Tailwind CSS</p>
+                                    </div>
+
+                                    <span class="border"></span>
+
+                                    <!--Article-->
+                                    <article class="content">
+                                        <h2 class="content-head">Introduction</h2>
+
+                                        <p>Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring dark mode support, a Figma design system, and more.</p>
+                                            
+                                        <p>It includes all of the commonly used components that a website requires, such as buttons, dropdowns, navigation bars, modals, but also some more advanced interactive elements such as datepickers.</p>
+                                            
+                                        <p>All of the elements are built using the utility classes from Tailwind CSS and vanilla JavaScript.</p>
+
+                                        <div class="iframe-wrapper">
+                                            <iframe class="ratio:16-9 fit brs-4 my-2" src="https://www.youtube.com/embed/mJW822p8iGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+
+                                        <p>Here’s a quick overview of the Flowbite ecosystem including the open source Tailwind components library, the Figma design files, and the pro version.</p>
+
+
+                                        <h4 class="sub-head">Include via CDN</h4>
+                                        <p>If you want to quickly test out Flowbite you can easily include the following CSS and JavaScript files.</p>
+
+                                        <p>Require the following minified stylesheet inside the head tag:</p>
+                                        <pre class="language-markup"><code><!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">--></code>
+                                        </pre>
+
+                                        <h4 class="sub-head">Discord community</h4>
+                                        <p>Feel free to join our community on Discord to receive help, contribute to the project, or just discuss about Flowbite, Tailwind CSS, and web development in general.</p>
+
+                                        <h4 class="sub-head">Authors</h4>
+                                        <ul>
+                                            <li><a href="#0">Zoltán Szőgyényi (web developer)</a>
+                                            </li>
+                                            <li><a href="#0">
+                                                Robert Tanislav (web designer)</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Robert Tanislav (web designer)</a>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:d-none lg:d-block lg:col-2">
+                        <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D4KQE&amp;placement=flowbitedesign" id="_carbonads_js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="js/router.js"></script>
+    <script src="../js/component/navbar.js"></script>
+    <!-- <script src="js/router.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/plugins/unescaped-markup/prism-unescaped-markup.min.js"></script>
+
 </body>
 </html>

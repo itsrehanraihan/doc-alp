@@ -1,1 +1,242 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+:root {
+  --border: var(--light-200);
+  --white: var(--light-500);
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  z-index: 111;
+}
+
+.documentation-wrapper {
+  position: relative;
+}
+
+.side-bar {
+  padding-top: 5rem;
+  overflow-y: auto;
+  z-index: 1;
+  height: calc(100vh - 1px);
+}
+
+.side-bar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.side-bar .aside-nav h5 {
+  font-size: .75rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .12rem;
+}
+
+.side-bar .aside-nav ul {
+  margin-bottom: 1rem;
+}
+
+.side-bar .aside-nav li a {
+  opacity: .8;
+  font-size: .875rem;
+  display: block;
+  padding: .35rem 0;
+  font-family: 'Poppins', "Inter", sans-serif;
+}
+
+.side-bar .aside-nav li a:hover {
+  opacity: 1;
+}
+
+.navbar .menu .nav-item .nav-link {
+  font-size: .85rem;
+  padding: .15rem;
+}
+
+.navbar .menu .nav-item .social-link {
+  margin: .35rem;
+}
+
+.navbar .menu .nav-item .social-link svg {
+  width: 1.5rem;
+  fill: var(--dark-400);
+  padding: 0 .175rem;
+  border-radius: .25rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.navbar .menu .nav-item .social-link:hover svg {
+  background: var(--light-100);
+}
+
+.page-content {
+  padding: 2rem 0;
+}
+
+.carbon-wrap {
+  font-size: 80%;
+}
+
+span.border {
+  height: 1px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--border);
+}
+
+article.content .content-head {
+  font-weight: 700;
+  margin: 1rem 0;
+  color: var(--dark-400);
+}
+
+article.content p {
+  line-height: 1.6em;
+  color: var(--dark-300);
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+article.content .sub-head {
+  font-size: 1.35rem;
+}
+
+article.content ul {
+  list-style: circle;
+  padding-left: 1.5rem;
+}
+
+article.content ul li {
+  margin: 1rem 0;
+}
+
+article.content ul li a {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+article.content ul li a:hover {
+  color: var(--dark-100);
+  text-decoration: underline;
+}
+
+.documentation-wrapper .iframe {
+  border-radius: 2rem;
+}
+
+.documentation-wrapper a {
+  color: var(--dark-300);
+}
+
+.documentation-wrapper a:hover {
+  color: var(--dark-500);
+}
+
+pre {
+  overflow: auto;
+  border-radius: .3rem;
+}
+
+code {
+  color: var(--error-100);
+}
+
+.code-toolbar {
+  position: relative;
+}
+
+.code-toolbar .copy-to-clipboard-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: 0;
+  border: none;
+  background: var(--dark-400);
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  color: var(--primary-200);
+}
+
+.navbar .navbar-nav .menu .nav-item .nav-link {
+  padding: 0.5rem 0.75rem !important;
+}
+
+.sidebar-toggler {
+  height: 3rem;
+  width: 3rem;
+  display: none;
+  position: fixed;
+  border-radius: 0 50% 0;
+  z-index: 110;
+  cursor: pointer;
+  left: 0;
+  top: 62px;
+  place-items: center;
+  background: var(--light-100);
+  margin-right: -2rem;
+  border: 2px solid var(--border);
+  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.sidebar-toggler svg {
+  width: 1.5rem;
+  fill: var(--dark-400);
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.sidebar-toggler.is-active {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+}
+
+.sidebar-toggler.is-active svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.search-box {
+  margin-left: 1rem;
+}
+
+.search-box input {
+  height: 2.15rem !important;
+  font-size: 14px;
+  padding: 0 .35rem;
+}
+
+@media (max-width: 767px) {
+  .side-bar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background: #fff;
+    margin-top: 3.5rem;
+    padding: 1rem;
+    width: 200px;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform .4s ease-in-out;
+    transition: -webkit-transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  }
+  .side-bar.is-active {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .sidebar-toggler {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+@media (max-width: 476px) {
+  .search-box input {
+    width: 90px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
