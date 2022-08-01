@@ -70,13 +70,10 @@ header {
     position: relative;
 }
 .side-bar {
-    top: 5rem;
+    top: 4.22rem;
     overflow-y: auto;
     z-index: 1;
-    height: calc(100vh - 1px);
-    &::-webkit-scrollbar {
-        width: 12px;
-    }
+    height: calc(100vh - 4.22rem);
     .aside-nav {
         h5 {
             font-size: .75rem;
